@@ -593,6 +593,7 @@ extension SearchTextField: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Search Text Field :: itemSelectionHandler \(itemSelectionHandler)")
         if itemSelectionHandler == nil {
             self.text = filteredResults[(indexPath as NSIndexPath).row].title
         } else {
